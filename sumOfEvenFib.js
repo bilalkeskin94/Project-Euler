@@ -5,12 +5,20 @@
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 const fib = (n) => {
+  let prev = 0;
+  let current = 1;
   let sum = 0;
-  if (n === 0 || n === 1) {
-    return 1;
-  } else {
-    return (sum = fib(n - 1) + fib(n - 2));
+  let next = 2;
+  for (current; current <= n; ) {
+    next = current + prev;
+    prev = current;
+
+    if (current % 2 === 0) {
+      sum += current;
+    }
+    current = next;
   }
+  return sum;
 };
 
-console.log(fib(10));
+console.log(fib(400));
