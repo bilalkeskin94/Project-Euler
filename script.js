@@ -1,16 +1,6 @@
-// The prime factors of 13195 are 5, 7, 13 and 29.
+// A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 
-// What is the largest prime factor of the number 600851475143 ?
-
-const largestPrimeFactor = (n) => {
-  let i = 2;
-  while (i <= n) {
-    if (n % i === 0) {
-      n /= i;
-    } else {
-      i++;
-    }
-  }
-  console.log(i);
+// Find the largest palindrome made from the product of two 3-digit numbers.
+const largestPalindrome = () => {
+  let x, y, mul;
 };
-largestPrimeFactor(600851475143);
